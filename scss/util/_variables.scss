@@ -1,0 +1,13 @@
+//  COLORS
+
+$black: hsl(0, 5%, 15%);
+$white: hsl(0, 0%, 100%);
+
+$primary-color: hsl(357, 91%, 58%);
+
+//  BREAKPOINTS
+
+$breakpoints: (
+    small: 28em,    // 448px    =   28*16px     biggest phone Iphone 12 pro max viewport is 428px width
+    large: 65em     // 1040px   =   65*16px     biggest tablet Ipad pro viewport is 1024px width
+) !default;
