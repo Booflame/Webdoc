@@ -1,5 +1,7 @@
 :root {
     --primary-color: hsl(357, 91%, 58%);
+    --black-color: hsl(0, 5%, 15%);
+
     --burger-height: 4px;
   }
 
@@ -87,7 +89,7 @@ html {
     display: block;
     width: 36px;
     height: var(--burger-height);
-    background-color: var(--primary-color);
+    background-color: var(--black-color);
     transition: transform 100ms ease-in-out;
 }
 
@@ -123,7 +125,8 @@ html {
 
 header {
     min-height: 150px;
-    background-color: #f5323c;
+    background-color: var(--primary-color);
+    position: relative;
 }
 
 header .logo {
@@ -132,28 +135,9 @@ header .logo {
   
 footer {
     min-height: 100px;
-    background-color: #282424;
+    background-color: var(--black-color);
     padding-block-end: 2rem;
-    color: #f5323c;
-}
-
-footer h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-block-end: 1rem;
-}
-
-footer .socials a:hover svg, footer .socials a:focus svg, footer .socials a:focus-visible svg {
-    fill: white;
-    transform: scale(1.1);
-}
-
-footer .socials svg {
-    width: 50px;
-    fill: #f5323c;
-    transition-property: fill, transform;
-    transition-timing-function: ease-in-out;
-    transition-duration: 150ms;
+    color: var(--primary-color);
 }
 
 @media only screen and (min-width: 28em) {
