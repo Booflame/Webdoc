@@ -143,6 +143,7 @@ main section{
 }
 .hero{
     position: relative;
+    overflow: hidden;
 }
 .hero h1{
     position: absolute;
@@ -154,10 +155,12 @@ main section{
     transform: translate(-50%, -50%);
     z-index: 20;
 }
+.hero h1 .title{
+    text-transform: uppercase;
+}
 .hero video{
     position: absolute;
     width: 100%;
-    overflow: hidden;
     z-index: 10;
 }
 .hero::after{
