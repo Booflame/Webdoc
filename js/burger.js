@@ -2,7 +2,7 @@ const btn = document.querySelector(".burger");
 const nav = document.querySelector("nav");
 const links = document.querySelectorAll(".link");
 // Open and close navigation when pressing button
-btn.addEventListener("click", function() {
+btn.addEventListener("click", () => {
     // Checking the value of visible every time there is clicked
     const visible = nav.getAttribute("data-visible");
     if (visible === "false") {
@@ -15,7 +15,7 @@ btn.addEventListener("click", function() {
 });
 // Close navigation when pressing links
 links.forEach(function(link){
-    link.addEventListener("click", function(){
+    link.addEventListener("click", () => {
         nav.setAttribute("data-visible", false);
         btn.setAttribute("aria-expanded", false);
     })
