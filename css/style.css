@@ -156,6 +156,7 @@ main section{
     margin-bottom: 1rem;
 }
 .side-scroll{
+    /* transform: translateX(var(--inverse-width)); */
     opacity: 0;
     transition: 1s ease-in-out 2s;
     box-shadow: 10px 10px 10px;
@@ -163,6 +164,7 @@ main section{
 .show{
     transform: translateX(0);
     opacity: 1;
+    transition: 2500ms ease-in 1200ms
 }
 .intro{
     width: 45ch;
