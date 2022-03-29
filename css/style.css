@@ -161,11 +161,8 @@ main section{
 }
 .show{
     transform: translateX(0);
-    animation: show 4000ms 1500ms;
-}
-@keyframes show{
-    from{opacity: 0}
-    to{opacity: 1}
+    opacity: 1;
+    transition: 2500ms ease-in 1200ms
 }
 .intro{
     width: 45ch;
