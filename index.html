@@ -13,19 +13,33 @@
     <link rel="stylesheet" href="https://use.typekit.net/uys5sku.css">
 </head>
 <body>
+<header class="hero">
+    <h1>
+        <span>BAA Præsentere</span>
+        <br>
+        <span>Marie på Grønland</span>
+        <br>
+        <span>- Praktik på kanten af verden -</span>
+    </h1>
+    <video src="assets/video/Isbjerg.mp4" muted autoplay loop></video>
+    <nav>
+        <ul>
+            <li><a class="link" href="">Fra Viby til Grønland</a></li>
+            <li><a class="link" href="">Grønlandsvogterne</a></li>
+            <li><a class="link" href="">Rejsen</a></li>
+            <li><a class="link" href="">Oplevelsen & tanker</a></li>
+            <li><a class="link" href="">Teori til praksis</a></li>
+            <li><a class="link" href="">Fremtiden</a></li>
+        </ul>
+    </nav>
+</header>
 <main>
-    <section class="hero">
-        <h1>
-            <span>BAA PRÆSENTERER</span>
-            <br>
-            <span class="title">Marie på Grønland</span>
-            <br>
-            <span>- PRAKTIK PÅ KANTEN AF VERDEN -</span>
-        </h1>
-        <video src="assets/video/Isbjerg.mp4" muted autoplay loop></video>
-    </section>
-    <section class="flex flex-center">
+    <section class="flexc flex-center gap-200">
         <h2>Fra Viby til Grønland</h2>
+        <div class="flex gap-200">
+            <img class="side-scroll" src="assets/img/selfie.jpeg" alt="selfie" width="400" style="--inverse-width: -400px">
+            <p class="intro"></p>
+        </div>
     </section>
     <section class="flex flex-center">
         <h2>Grønlandsvogterne</h2>
@@ -46,14 +60,13 @@
 <script src="js/pointer.js"></script>
 <script>
     // nedsænket video hastighed
-    document.querySelector("video").playbackRate = .5;
-     
+    document.querySelector("video").playbackRate = .8;
     // cursor indstillinger 
     init_pointer({
-            pointerColor: "white", // Css color
-	ringSize: 18, // Pixels
-	ringClickSize: 10 // Pixels when clicking
-        })
+        pointerColor: "white", // Css color
+	    ringSize: 18, // Pixels
+	    ringClickSize: 10 // Pixels when clicking
+    })
 </script>
 </body>
 </html>
