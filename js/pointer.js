@@ -1,4 +1,3 @@
-
 const pointer = document.createElement("div")
 pointer.id = "pointer-dot"
 const ring = document.createElement("div")
