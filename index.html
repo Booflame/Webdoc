@@ -10,7 +10,6 @@
     <script src="js/burger.js" defer ></script>
     <script src="js/observers.js" defer ></script>
     <script src="js/typewriter.js" defer ></script>
-    <script src="js/pointer.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/uys5sku.css">
 </head>
 <body class="pancake">
@@ -38,11 +37,16 @@
 </main>
 <footer>
 </footer>
+<script src="js/pointer.js"></script>
 <script>
     // nedsænket video hastighed
     document.querySelector("video").playbackRate = .5;
-        init_pointer({
-            
+     
+    // cursor indstillinger 
+    init_pointer({
+            pointerColor: "white", // Css color
+	ringSize: 18, // Pixels
+	ringClickSize: 10 // Pixels when clicking
         })
 </script>
 </body>

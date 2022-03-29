@@ -207,7 +207,7 @@ main section{
     width: 0;
     height: 0;
     padding: 15px;
-    border: 2px solid #750c7e;
+    border: 2px solid white;
     position: fixed;
     border-radius: 100px;
     z-index: 102;
