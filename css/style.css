@@ -3,26 +3,18 @@
     --black-color: hsl(0, 5%, 15%);
 
     --burger-height: 4px;
-  }
-
+}
 html {
     font-size: 100%;
     overflow-x: hidden;
     font-family: arbotek,sans-serif;
     font-weight: 300;
     font-style: normal;
-  }
-  
-.pancake {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
 }
-
 .wrapper {
     width: 90%;
     margin-inline: auto;
 }
-
 .flex {
     display: flex;
 }
@@ -57,23 +49,18 @@ html {
     display: flex;
     flex-direction: column;
 }
-
 .gap-50 {
     gap: 0.5rem;
 }
-
 .gap-100 {
     gap: 1rem;
 }
-
 .gap-150 {
     gap: 1.5rem;
 }
-
 .gap-200 {
     gap: 2rem;
 }
-
 .burger {
     all: unset;
     position: absolute;
@@ -85,7 +72,6 @@ html {
     transform: translateY(-50%);
     z-index: 99;
 }
-
 .inner-burger,
 .inner-burger::before,
 .inner-burger::after {
@@ -95,47 +81,37 @@ html {
     background-color: var(--black-color);
     transition: transform 100ms ease-in-out;
 }
-
 .inner-burger {
     position: relative;
 }
-
 .inner-burger::before,
 .inner-burger::after {
     position: absolute;
     content: "";
 }
-
 .inner-burger::before {
     top: calc(-4px - 7px);
 }
-
 .inner-burger::after {
     top: calc(var(--burger-height) + 7px);
 }
-
 .burger[aria-expanded=true] .inner-burger {
     transform: rotateZ(45deg);
 }
-
 .burger[aria-expanded=true] .inner-burger::before {
     transform: translateY(calc(var(--burger-height) + 7px)) rotateZ(-90deg);
 }
-
 .burger[aria-expanded=true] .inner-burger::after {
     display: none;
 }
-
 header {
     min-height: 150px;
     background-color: var(--primary-color);
     position: relative;
 }
-
 header .logo {
     width: 200px;
 }
-
 main section{
     height: 100vh;
     background-color: hsl(0, 5%, 25%);
@@ -184,14 +160,12 @@ main section{
     transform: translateX(0);
     opacity: 1;
 }
-  
 footer {
     min-height: 100px;
     background-color: var(--black-color);
     padding-block-end: 2rem;
     color: var(--primary-color);
 }
-
 @media only screen and (min-width: 28em) {
     .wrapper {
       width: 80%;
@@ -205,7 +179,6 @@ footer {
         display: none;
     }
 }
-
 @media only screen and (min-width: 65em) {
     .wrapper {
         width: 70%;
