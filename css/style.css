@@ -10,6 +10,7 @@ html {
     font-family: arbotek,sans-serif;
     font-weight: 300;
     font-style: normal;
+    cursor: none !important;
 }
 .wrapper {
     width: 90%;
@@ -145,7 +146,7 @@ main section{
     width: 100%;
     height: 100%;
     top: 0;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .2);
     z-index: 15;
 }
 .test{
@@ -160,6 +161,36 @@ main section{
     transform: translateX(0);
     opacity: 1;
 }
+/* cursor style */
+#pointer-dot {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 2.5px solid white;
+    position: fixed;
+    border-radius: 4px;
+    z-index: 101;
+    pointer-events: none;
+    transition: border-color 0.5s;
+}
+#pointer-ring {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 15px;
+    border: 2px solid white;
+    position: fixed;
+    border-radius: 100px;
+    z-index: 102;
+    pointer-events: none;
+}
+
+a {
+    cursor: none !important;
+}
+/* cursor style slut */
 footer {
     min-height: 100px;
     background-color: var(--black-color);

@@ -16,9 +16,11 @@
 <main>
     <section class="hero">
         <h1>
-            <span>BAA præsenterer</span>
+            <span>BAA PRÆSENTERER</span>
+            <br>
             <span class="title">Marie på Grønland</span>
-            <span>Praktik på kanten af verden</span>
+            <br>
+            <span>- PRAKTIK PÅ KANTEN AF VERDEN -</span>
         </h1>
         <video src="assets/video/Isbjerg.mp4" muted autoplay loop></video>
     </section>
@@ -41,9 +43,17 @@
         <h2>Fremtiden</h2>
     </section>
 </main>
+<script src="js/pointer.js"></script>
 <script>
     // nedsænket video hastighed
-    document.querySelector("video").playbackRate = .8;
+    document.querySelector("video").playbackRate = .5;
+     
+    // cursor indstillinger 
+    init_pointer({
+            pointerColor: "white", // Css color
+	ringSize: 18, // Pixels
+	ringClickSize: 10 // Pixels when clicking
+        })
 </script>
 </body>
 </html>
