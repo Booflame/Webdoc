@@ -103,59 +103,36 @@ html {
 .burger[aria-expanded=true] .inner-burger::after {
     display: none;
 }
-header {
-    min-height: 150px;
-    background-color: var(--primary-color);
-    position: relative;
-}
-header .logo {
-    width: 200px;
-}
-main section{
-    height: 100vh;
-    background-color: hsl(0, 5%, 25%);
-    margin-bottom: 2rem;
-}
 .hero{
     position: relative;
     overflow: hidden;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
 }
 .hero h1{
     position: absolute;
-    color: #fff;
-    text-align: center;
     font-size: 2.5rem;
-    font-weight: 100;
+    white-space: nowrap;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
 }
-
+.hero h1 .title{
+    font-weight: 600;
+    font-size: 4rem;
+}
 .hero h2{
     position: absolute;
-    color: #fff;
-    text-align: center;
     font-size: 2rem;
-    font-weight: 100;
-    top: 5%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
 }
-
-.hero h1 .title{
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 4rem;
-}
-
-.pre-titel {
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .hero video{
     position: absolute;
     width: 100%;
@@ -167,20 +144,30 @@ main section{
     width: 100%;
     height: 100%;
     top: 0;
-    background: rgba(0, 0, 0, .2);
+    background: hsla(0, 4%, 25%, 0.2);
     z-index: 15;
 }
-.test{
-    width: 300px;
-    height: 200px;
-    background-color: hsl(37, 91%, 58%);
-    transform: translateX(-50vw);
+nav{
+    display: none;
+}
+main section{
+    height: 100vh;
+    background-color: hsla(0, 4%, 25%);
+    margin-bottom: 1rem;
+}
+.side-scroll{
+    transform: translateX(var(--inverse-width));
     opacity: 0;
-    transition: 500ms ease-in-out 100ms;
+    transition: 500ms ease-in-out 500ms;
 }
 .show{
     transform: translateX(0);
     opacity: 1;
+}
+.intro{
+    width: 45ch;
+    font-size: 1.3rem;
+    color: #fff;
 }
 /* cursor style */
 #pointer-dot {
