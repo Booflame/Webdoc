@@ -107,31 +107,30 @@ html {
     position: relative;
     overflow: hidden;
     height: 100vh;
+}
+.hero h1,
+.hero h2{
+    position: absolute;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
     font-weight: 100;
-}
-.hero h1{
-    position: absolute;
-    font-size: 2.5rem;
-    white-space: nowrap;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
+}
+.hero h1{
+    font-size: 2.5rem;
+    white-space: nowrap;
+    top: 50%;
 }
 .hero h1 .title{
     font-weight: 600;
     font-size: 4rem;
 }
 .hero h2{
-    position: absolute;
     font-size: 2rem;
     top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 20;
 }
 .hero video{
     position: absolute;
