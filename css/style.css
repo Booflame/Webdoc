@@ -158,6 +158,8 @@ main section{
 .side-scroll{
     /* transform: translateX(var(--inverse-width)); */
     opacity: 0;
+    transition: 1s ease-in-out 2s;
+    box-shadow: 10px 10px 10px;
 }
 .show{
     transform: translateX(0);
