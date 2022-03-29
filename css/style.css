@@ -10,6 +10,7 @@ html {
     font-family: muli,sans-serif;
     cursor: none !important;
 }
+
 .wrapper {
     width: 90%;
     margin-inline: auto;
@@ -130,7 +131,7 @@ html {
 }
 .hero h2{
     font-size: 2rem;
-    top: 25%;
+    top: 5%;
 }
 .hero video{
     position: absolute;
