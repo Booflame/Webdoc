@@ -1,3 +1,4 @@
+
 const pointer = document.createElement("div")
 pointer.id = "pointer-dot"
 const ring = document.createElement("div")
@@ -18,11 +19,11 @@ const init_pointer = (options) => {
         mouseY = mouse.clientY
     }
 
-    window.onmousedown = (mouse) => {
+    window.onmousedown = () => {
         mouseDown = true
     }
 
-    window.onmouseup = (mouse) => {
+    window.onmouseup = () => {
         mouseDown = false
     }
 
@@ -36,6 +37,7 @@ const init_pointer = (options) => {
             pointerColor: "#750c7e",
             ringSize: 15,
             ringClickSize: (options["ringSize"] || 15) - 5,
+            ringHoverSize: (options["ringSize"] || 15) + 5
         }
         if (options[option] == undefined) {
             return defaultObj[option]
@@ -47,23 +49,26 @@ const init_pointer = (options) => {
     const render = () => {
         ringX = trace(ringX, mouseX, 0.2)
         ringY = trace(ringY, mouseY, 0.2)
-
-        if (document.querySelector(".p-action-click:hover")) {
-            pointer.style.borderColor = getOption("pointerColor")
-            isHover = true
-        } else {
-            pointer.style.borderColor = "white"
-            isHover = false
-        }
+        const link = document.querySelector(".link:hover")
+        const btn = document.querySelector(".burger:hover")
         ring.style.borderColor = getOption("pointerColor")
         if (mouseDown) {
             ring.style.padding = getOption("ringClickSize") + "px"
-        } else {
-            ring.style.padding = getOption("ringSize") + "px"
+        } 
+        else {
+            if (link || btn) {
+                ring.style.padding = getOption("ringHoverSize") + "px"
+                isHover = true
+            } else {
+                isHover = false
+                ring.style.padding = getOption("ringSize") + "px"
+            }
         }
 
         pointer.style.transform = `translate(${mouseX}px, ${mouseY}px)`
-        ring.style.transform = `translate(${ringX - (mouseDown ? getOption("ringClickSize") : getOption("ringSize"))}px, ${ringY - (mouseDown ? getOption("ringClickSize") : getOption("ringSize"))}px)`
+        ring.style.transform = `translate(
+        ${ringX - (mouseDown ? getOption("ringClickSize") : getOption("ringSize"))}px,
+        ${ringY - (mouseDown ? getOption("ringClickSize") : getOption("ringSize"))}px)`
 
         requestAnimationFrame(render)
     }
