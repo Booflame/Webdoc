@@ -130,9 +130,11 @@ li:hover .link{
 .hero{
     display: grid;
     height: auto;
+    max-height: 100vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 100px 2fr 200px 3fr;
     position: relative;
+    overflow: hidden;
 }
 .hero::after{
     content: "";
@@ -170,6 +172,7 @@ li:hover .link{
     grid-column: 1/-1;
     grid-row: 1/-1;
     width: max(360px,100%);
+    object-fit: fill;
 }
 main section{
     height: 100vh;
