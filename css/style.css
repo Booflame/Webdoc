@@ -4,6 +4,25 @@
 
     --burger-height: 4px;
 }
+/* scrollbar justering */
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    background-color: hsl(40, 0%, 10%);
+}
+::-webkit-scrollbar-thumb{
+    background-color: hsl(0, 0%, 75%);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(0, 0%, 60%);
+}
+/* firefox support for scrollbar */
+@supports (scrollbar-color: red blue ){
+    *{
+        scrollbar-color: hsl(0, 0%, 75%) hsl(40, 0%, 10%);
+    }
+}
 html {
     font-size: 100%;
     overflow-x: hidden;
@@ -14,6 +33,35 @@ html {
     width: 90%;
     margin-inline: auto;
 }
+/* cursor style */
+#pointer-dot {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 2.5px solid white;
+    position: fixed;
+    border-radius: 4px;
+    z-index: 101;
+    pointer-events: none;
+    transition: border-color 0.5s;
+}
+#pointer-ring {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 15px;
+    border: 2px solid white;
+    position: fixed;
+    border-radius: 100px;
+    z-index: 102;
+    pointer-events: none;
+}
+a {
+    cursor: none !important;
+}
+/* cursor style slut */
 .flex {
     display: flex;
 }
@@ -104,29 +152,6 @@ html {
 .burger[aria-expanded=true] .inner-burger::after {
     display: none;
 }
-nav{
-    position: absolute;
-    right: 0;
-    transform: translateX(100%);
-    padding-block: min(30vh, 8rem);
-    padding-inline: 3rem 6rem;
-    height: 100%;
-    background: hsla(0, 0%, 25%, 0.2);
-    backdrop-filter: blur(.8rem);
-    transition: transform 300ms ease-in-out;
-    z-index: 30;
-}
-nav[data-visible="true"]{
-    transform: translateX(0);
-}
-.link{
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.3rem;
-}
-li:hover .link{
-    text-decoration: underline;
-}
 .hero{
     display: grid;
     height: auto;
@@ -174,56 +199,56 @@ li:hover .link{
     width: max(360px,100%);
     object-fit: fill;
 }
+nav{
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    padding-block: min(30vh, 8rem);
+    padding-inline: 3rem 6rem;
+    height: 100%;
+    background: hsla(0, 0%, 25%, 0.2);
+    backdrop-filter: blur(.8rem);
+    transition: transform 300ms ease-in-out;
+    z-index: 30;
+}
+nav[data-visible="true"]{
+    transform: translateX(0);
+}
+.link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+li:hover .link{
+    text-decoration: underline;
+}
 main section{
     height: 100vh;
-    background-color: hsla(0, 4%, 25%);
-    margin-bottom: 1rem;
+    background-color: hsl(0, 4%, 25%);
+}
+#about{
+    background-color: hsl(0, 0%, 5%);
+    color: #fff;
+    box-shadow: inset 0px 0px 50px 50px #000;
 }
 .side-scroll{
-    /* transform: translateX(var(--inverse-width)); */
     opacity: 0;
-    transition: 1s ease-in-out 2s;
-    box-shadow: 10px 10px 10px;
+    box-shadow: #000 10px 10px 10px;
 }
 .show{
     transform: translateX(0);
     opacity: 1;
-    transition: 2500ms ease-in 1200ms
+    transition: 2500ms ease-in 1000ms
 }
 .intro{
     width: 45ch;
     font-size: 1.3rem;
-    color: #fff;
 }
-/* cursor style */
-#pointer-dot {
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    border: 2.5px solid white;
-    position: fixed;
-    border-radius: 4px;
-    z-index: 101;
-    pointer-events: none;
-    transition: border-color 0.5s;
+#vogterne{
+    background-color: hsl(0, 0%, 90%);
+    box-shadow: inset 0px 0px 25px 20px #000;
 }
-#pointer-ring {
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    padding: 15px;
-    border: 2px solid white;
-    position: fixed;
-    border-radius: 100px;
-    z-index: 102;
-    pointer-events: none;
-}
-a {
-    cursor: none !important;
-}
-/* cursor style slut */
+
 @media only screen and (min-width: 28em) {
     .wrapper {
       width: 80%;
