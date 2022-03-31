@@ -22,8 +22,8 @@
         <span>- Praktik på kanten af verden -</span>
     </h1>
     <video src="assets/video/Isbjerg.mp4" muted autoplay loop></video>
-    <nav>
-        <ul>
+    <nav id="navigation" data-visible="false">
+        <ul class="flexc gap-150" role="list">
             <li><a class="link" href="">Fra Viby til Grønland</a></li>
             <li><a class="link" href="">Grønlandsvogterne</a></li>
             <li><a class="link" href="">Rejsen</a></li>
@@ -32,6 +32,9 @@
             <li><a class="link" href="">Fremtiden</a></li>
         </ul>
     </nav>
+    <button class="burger" aria-controls="navigation" aria-label="navigation-button" aria-expanded="false">
+        <span class="inner-burger"></span>
+    </button>
 </header>
 <main>
     <section class="flexc flex-center gap-200">
@@ -65,6 +68,7 @@
     init_pointer({
         pointerColor: "white", // Css color
 	    ringSize: 18, // Pixels
+	    ringHoverSize: 22, // Pixels on hover
 	    ringClickSize: 10 // Pixels when clicking
     })
 </script>
