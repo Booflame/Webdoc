@@ -216,8 +216,34 @@ li:hover .link{
 }
 main section{
     height: 100vh;
-    background-color: hsl(0, 4%, 25%);
+    background-color: hsl(225, 24%, 10%);
 }
+
+#baa {
+    background-color: #0d1517;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#baa p {
+    width: 45ch;
+    font-family: 'muli', sans-serif;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#baa video {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    width: max(360px,100%);
+    object-fit: fill;
+}
+
+
 #about{
     background-color: hsl(0, 0%, 5%);
     color: #fff;
@@ -225,7 +251,7 @@ main section{
 }
 .side-scroll{
     opacity: 0;
-    box-shadow: #000 10px 10px 10px;
+    box-shadow: #fff 10px 10px 10px;
 }
 .show{
     transform: translateX(0);
