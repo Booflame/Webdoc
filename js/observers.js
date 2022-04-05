@@ -1,24 +1,10 @@
-const scrollElements = document.querySelectorAll(".side-scroll")
-const showObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.toggle("show")
-            showObserver.unobserve(entry.target)
-        }
-    })
-})
-
-scrollElements.forEach(e => {
-    showObserver.observe(e)
-})
-
 // Typewriter
 class Typerwriter {
     constructor(el, options){
         this.el = el;
         this.word = el.dataset.title;
         this.speed = options?.speed || 200;
-        this.delay = options?.delay || 1500;
+        this.delay = options?.delay || 1000;
         this.initTyping();
     }
 
@@ -65,5 +51,5 @@ if(!!window.IntersectionObserver){
 
       });
     }, {threshold: 1});
-    observer.observe(video) ;
-  } 
+    observer.observe(video);
+}

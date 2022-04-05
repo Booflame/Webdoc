@@ -4,142 +4,293 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <title>Marie på Grønland</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/burger.js" defer ></script>
     <script src="js/observers.js" defer ></script>
-    <!-- <script src="js/typewriter.js" defer ></script> -->
+    <script src="js/rejsenObserver.js" defer></script>
     <link rel="stylesheet" href="https://use.typekit.net/var2sot.css">
     <link rel="stylesheet" href="https://use.typekit.net/uys5sku.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 </head>
 <body>
-<!-- scrollbar indicator test start-->
-<section class="smooth-scroll smoooth">
-    <div class="smooth-scroll-inner smoooth-inner">
-<!-- Scrollbar indicator test slut-->
-        <header class="hero">
-            <h2>BAA Præsenterer</h2>
-            <h1>
-                <span class="title">Marie på Grønland</span>
-                <br>
-                <span>- Praktik på kanten af verden -</span>
-            </h1>
-            <video src="assets/video/Isbjerg.mp4" muted autoplay loop></video>
-            <nav id="navigation" data-visible="false">
-                <ul class="flexc gap-150" role="list">
-                    <li><a class="link" href="#about">Fra Viby til Grønland</a></li>
-                    <li><a class="link" href="#vogter">Grønlandsvogterne</a></li>
-                    <li><a class="link" href="#rejsen">Rejsen</a></li>
-                    <li><a class="link" href="#oplevelsen">Oplevelsen & tanker</a></li>
-                    <li><a class="link" href="#teori">Teori til praksis</a></li>
-                    <li><a class="link" href="#fremtiden">Fremtiden</a></li>
-                </ul>
-            </nav>
-            <button class="burger" aria-controls="navigation" aria-label="navigation-button" aria-expanded="false">
-                <span class="inner-burger"></span>
-            </button>
-        </header>
-        <main>
-            <section id="baa">
-                <p>
-                    Business Academy Aarhus er et af landets største erhvervsakademier. Vi tilbyder en lang række uddannelser, 
-                    hvor vi kombinerer teori og praksis. Her er erhvervslivet en aktiv del af vores undervisning og på den måde lærer vi af erhvervslivet, 
-                    mens de lærer af os. Vi prioriterer bl.a. virkelighedsnære cases og obligatoriske praktikophold på alle fuldtidsuddannelser.
-                </p>
-            </section>
-            <section id="about" class="flexc flex-center gap-200">
-                <h2 data-title="Fra Viby til Grønland"></h2>
-                <div class="flex gap-200">
-                    <img class="side-scroll" src="assets/img/selfie.jpeg" alt="selfie" width="400">
-                    <p class="intro">
-                        Marie Sohn Madsen er 25 år gammel og kommer fra Vejle.
-                        Hun bor sammen med sin kæreste, Line i Holme ved Århus. 
-                        I de seneste år har Marie studeret på Multimediedesigner 
-                        uddannelsen på Erhvervsakademi Aarhus på Content Creation linjen.
-                        Nu er hun på 4. og sidste semester, hvor man på uddannelsen skal i praktik. 
-                        Dog havde Marie aldrig forudset at skulle befinde sig i den vilde realitet 
-                        at skulle have sin praktik med begge fødder plantet i sneen, på kanten af verden - på Grønland.
-                    </p>
+<header class="hero">
+    <h2>BAA Præsenterer</h2>
+    <h1>
+        <span class="title">Marie på Grønland</span>
+        <br>
+        <span>- Praktik på kanten af verden -</span>
+    </h1>
+    <video src="assets/video/Isbjerg.mp4" muted autoplay loop></video>
+    <nav id="navigation" data-visible="false">
+        <ul class="flexc gap-150" role="list">
+            <li><a class="link" href="#baa">BAA</a></li>
+            <li><a class="link" href="#about">Fra Viby til Grønland</a></li>
+            <li><a class="link" href="#vogterne">Grønlandsvogterne</a></li>
+            <li><a class="link" href="#rejsen">Rejsen</a></li>
+            <li><a class="link" href="#oplevelsen">Oplevelsen & tanker</a></li>
+            <li><a class="link" href="#teori">Teori til praksis</a></li>
+            <li><a class="link" href="#fremtiden">Fremtiden</a></li>
+        </ul>
+    </nav>
+    <button class="burger" aria-controls="navigation" aria-label="navigation-button" aria-expanded="false">
+        <span class="inner-burger"></span>
+    </button>
+</header>
+<main>
+    <section id="baa" class="flexc flex-center">
+        <p>
+            Business Academy Aarhus er et af landets største erhvervsakademier.   
+        </p>
+        <p>
+            Vi tilbyder en lang række uddannelser, hvor vi kombinerer <span class="kant" data-title="teori og praksis."></span>
+        </p>
+        <p>
+            Her er erhvervslivet en aktiv del af vores undervisning og på den måde lærer vi af erhvervslivet, mens de lærer af os.
+        </p>
+        <p>
+            Vi prioriterer bl.a. virkelighedsnære cases og obligatoriske praktikophold på alle fuldtidsuddannelser.
+        </p>
+    </section>
+    <section id="about" class="flexc flex-center gap-200">
+        <h2>Praktik på <span class="kant" data-title="kanten"></span>  af verden</h2>
+        <div class="flex flex-center gap-200">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="assets/img/selfie.jpeg" width="400">
                 </div>
-            </section>
-            <section id="vogterne" class="flex flex-center">
-                <h2 data-title="Grønlandsvogterne"></h2>
-                <p>
-                    Grønlandsvogterne er en organisation udsprunget fra det danske forsvar, hvor vi orøver at hverve frivillige, civile mennesker. Det er lidt ala hjemmeværnet, som vi har i Danmark. 
-                    Det udspringer fra “projekt frivillig beredskab”. Vi arbejder primært på at øge sikkerheden i Grønland for Grønlændere. 
+                <div class="mySlides fade">
+                    <img src="assets/img/selfie2.webp" width="400">
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets/img/selfie3.jpg" width="400">
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets/img/selfie4.jpg" width="400">
+                </div>
+            </div>
+            <div class="flexc gap-200">
+                <p class="sidetext">
+                    Marie Sohn Madsen er 25 år gammel og kommer fra Vejle.
+                    Hun bor sammen med sin kæreste, Line i Holme ved Århus. 
+                </p>
+                <p class="sidetext"> 
+                    I de seneste år har Marie studeret på Multimediedesigner 
+                    uddannelsen på Erhvervsakademi Aarhus på Content Creation linjen.
+                    Nu er hun på 4. og sidste semester, hvor man på uddannelsen skal i praktik. 
+                </p>
+                <p class="sidetext">
+                    Dog havde Marie aldrig forudset at skulle befinde sig i den vilde realitet 
+                    at skulle have sin praktik med begge fødder plantet i sneen, på kanten af verden - på Grønland.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="movie" class="flex flex-center">
+        <video class="movie" src="assets/video/webdokfinal.mp4" controls ></video>
+    </section>
+    <section id="vogterne" class="flexc flex-center">
+        <h2>Grønlandsvogterne</h2>
+        <div class="container" id="top">
+            <div class="pa1 parallax">
+                <div class="bg">
+                    <h3>Arktisk Kommando</h3>
+                </div>
+            </div>
+            <div class="between">
+                <div class="title flexc flex-center">
+                    <p>
+                    Arktisk Kommando - Grønlandsvogterne er en organisation udsprunget fra det danske forsvar, som prøver at hverve frivillige, civile mennesker. Det er lidt ala hjemmeværnet, som vi har i Danmark. 
+                    Det udspringer fra Projekt Frivillig Beredskab. Vi arbejder primært på at øge sikkerheden i Grønland for Grønlændere. 
+                    <br>
+                    <br>
                     Vi arbejder fysisk ved at vi giver nødpejlesendere med GPS. Så når en grønlandsk mand er ude at fiske i sin lille sælskinds jolle blandt de store isbjerge, så har han en SOS knap med sig, skulle der ske noget.
-                </p>
-                <p> 
                     Mange grønlændere holder stadig fast i traditionerne. “Jeg har den her sælskinds kajak, og det er fint og jeg kan sagtens - det fungerede for mine forfædre, så det fungerer også for mig”.
-                </p>
-                <p> 
-                    Så vi prøver at fremme lidt udvikling og informere dem om at sikkerhed er vigtigt, og at det kun kræver sådan en lille maskine.
-                </p>
-            </section>
-            <section id="rejsen" class="flexc flex-center">
-                <h2 data-title="Rejsen"></h2>
-                <div>
-                    <p>
-                        Selve rejsen foregik uproblematisk for Marie. Hendes chef, Christian havde købt og sendt flybilletter, så hun skulle blot møde op i Kastrup, 
-                        hvor hun først blev fløjet til Søndre Strømfjord (Kangerlussuaq), som er den eneste by, der har en stor nok lufthavn der kan modtage de større fly fra Danmark.
-                        Herfra tog hun et lille indenrigsfly, en rejse på en time til Nuuk. Christian tog imod hende i Nuuk lufthavn og fik hende installeret i sin nye lejlighed. 
-                    </p>
-                    <p>
-                        “Han tjekkede lige at der var internet, at jeg kunne ringe fra den her telefon, og så ses vi ellers i morgen klokken 08:00.”
                     </p>
                 </div>
-                <video class="rejse" src="assets/video/Greenland_travel.mp4" muted autoplay loop></video>
-            </section>
-            <section id="oplevelsen" class="flex flex-center">
-                <h2 data-title="Oplevelsen & tanker"></h2>
-                <p>
-                    Der lød et kort og klart “Nej.” da vi spurgte Marie om hun havde følt sig klar og rustet til at komme ud i praktik og arbejde for en rigtig virksomhed.
-                    Dog efterfulgt af et lettet grin og et opløftende “MEN..”
-                </p>
-                <p>
-                    “Men - det har lærerne på skolen være gode til at sige fra starten af, at det er man ikke. 
-                    Det er overvældende og når du søger praktikplads og de søger sådan og sådan af kompetencer, så føler du ikke at du har nogen af dem.”
-                </p>
-                <p>
-                    Marie fortæller at de har fået god vejledning i processen og hvad de kan forvente af deres tid i praktik, men at det stadig er anderledes når du kommer ud.
-                </p>  
-                <p>
-                    “Den første uge sov jeg jo nærmest ikke i min praktik, fordi jeg skulle op og arbejde og lave noget. 
-                    De skulle jo tro jeg kunne noget. Det er den samme oplevelse jeg hører om fra mine klassekammerater.”
-                </p>
-                <p>
-                    “Til gengæld har jeg også haft en praktikplads, hvor de har været gode til at gribe mig. Min chef, Christian, 
-                    der tager fat i mig og siger “Slap af Marie. Du har lavet 28 ting på 28 minutter. Tag en kop kaffe og fortsæt i morgen, ikk?”
-                </p>
-            </section>
-            <section id="teori" class="flex flex-center">
-                <h2 data-title="Teori til praksis"></h2>
-            </section>
-            <section id="fremtiden" class="flex flex-center">
-                <h2 data-title="Fremtiden"></h2>
-                <p>
-                    Nu hvor jeg arbejder for forsvaret, Arktisk Kommando, som er en afdeling heroppe hvor jeg er i praktik, 
-                    så har jeg fået et kæmpe stort indblik i hvordan det er at arbejde for forsvaret. Så mine tanker er begyndt 
-                    at florere om ideen at jeg skal i værnepligt og have en fremtid herinde.
-                </p>
-                <p>
-                    Multimediedesign-mæssigt har jeg fået et større indblik i hvordan det er at arbejde med det vi har lært i skolen - 
-                    i praksis. Tilbage i efteråret vidste jeg ikke om det var nok for mig at sidde stille på et kontor hver dag. 
-                    Men nu hvor jeg har prøvet at arbejde med det på et rigtigt kontor i virkeligheden, så er det ikke så stillesiddende igen - i hvert fald ikke heroppe.
-                </p>
-                <p>
-                    Min plan lige nu efter jeg har fået indblik i forsvaret er at jeg vil søge ind i værnepligten og håber at kunne komme på den til sommer. 
-                    Hvis ikke så hælder jeg mest til at læse videre og tage en top-op, som erhvervsakademiet også tilbyder. Så får du en professionsbachelor. 
-                    Ikke fordi jeg ikke føler jeg kan nok endnu, for det er jeg blevet bekræftet i min praktikplads, 
-                    at selvom jeg var nervøs i starten så kan jeg godt og jeg kan mere end de forventede.
-                </p>
-            </section>
-        </main>
-    </div>
-</section>
+            </div>
+            <div class="pa2 parallax">
+                <div class="bg">
+                    <h3>Maries opgaver</h3>
+                </div>
+            </div>
+            <div class="between">
+                <div class="title flexc flex-center">
+                    <p>
+                    Maries opgaver er at lave reklame for Grønlandsvogterne. Dette er generelt at lave opslag på deres facebookside, hvor hun laver historier der informerer om hvad sikkerhed er,
+                    og at grønlænderne har muligheden for at få en gratis nødpejlesender og kurser mm. ved at tilmelde sig.
+                    <br>
+                    <br>
+                    Grønland er også et ret fattigt land, så den individuelle borger har ikke råd til den slags sikkerhed. 
+                    Sådan en nødpejlesender koster 2000 kr. stykket, men hvis de tilmelder sig organisationen, 
+                    så får den den gratis samt lidt merchandise i form af logo refleksveste og klistermærker der viser, at de er en del af grønlandsvogterne.
+
+                    "I weekenden lavede vi bl.a. et sikkerhedskursus - et lavinekursus de kunne tilmelde sig gratis. Det er et godt initiativ til at udbrede viden om 
+                    og vigtigheden af sikkerhed, og vi giver dem skubbet i at det er gratis."
+                    </p>
+                </div>
+            </div>
+            <div class="pa3 parallax">
+                <div class="bg">
+                    <h3>En Facebook Nation</h3>
+                </div>
+            </div>
+            <div class="between">
+                <div class="title flexc flex-center">
+                    <p>
+                    Grønland er kendt for at være en Facebook nation. Dvs. alt foregår på facebook - om du bestiller takeaway, 
+                    en frisørtid eller holder dig oplyst om hvad politiet skriver at der sker i de forskellige områder, 
+                    så er det på Facebook det hele. Så Marie laver opslag der skal booste deres side, men de arbejder også på at få en hjemmeside op at køre, 
+                    så tilmeldingen kan foregå automatisk frem for at tilmeldingen er en flyer, der skal skrives med pen og papir og sendes med posten. 
+                    Her er Marie inde over designet samt kommunikationen med virksomheden der skal programmere siden.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="rejsen" class="flexc flex-center">
+        <h2>Rejsen</h2>
+        <div class="flexc">
+            <p class="rejsenPara"> 
+                Selve rejsen foregik uproblematisk for Marie. Hendes chef, Christian havde købt og sendt flybilletter, så hun skulle blot møde op i Kastrup, 
+                hvor hun først blev fløjet til Søndre Strømfjord (Kangerlussuaq), som er den eneste by, der har en stor nok lufthavn der kan modtage de større fly fra Danmark.
+                Herfra tog hun et lille indenrigsfly, en rejse på en time til Nuuk. Christian tog imod hende i Nuuk lufthavn og fik hende installeret i sin nye lejlighed. 
+            </p>
+            <p class="rejsenPara">
+                “Han tjekkede lige at der var internet, at jeg kunne ringe fra den her telefon, og så ses vi ellers i morgen klokken 08:00.”
+            </p>
+        </div>
+        <video class="rejse" src="assets/video/Route_travel.mp4" muted autoplay loop></video>
+        <div class="photo1Container">
+            <div class="photo topTapeHoriz">
+              <img src="assets\img\IMG_0307.PNG" > 
+            </div>
+            <div class="photo topTapeVert">
+              <img src="assets\img\kastruplufthavn.jpeg" > 
+            </div>
+        </div>
+        <div class="photo2Container">
+            <div class="photo top2TapeVert">
+              <img src="assets\img\rejsen_flymad.jpeg">
+            </div>
+             <div class="photo corner2Tape">
+                <img src="assets\img\rejsen_indrigsfly.jpeg">
+            </div>
+        </div>
+    </section>
+    <section id="oplevelsen" class="flexc flex-center">
+        <h2 data-title="Klar til praktik?"></h2>
+        <p>
+            Der lød et kort og klart “Nej.” da vi spurgte Marie om hun havde følt sig klar og rustet til at komme ud i praktik og arbejde for en rigtig virksomhed.
+            Dog efterfulgt af et lettet grin og et opløftende “MEN..”
+        </p>
+        <p>
+            “Men - det har lærerne på skolen være gode til at sige fra starten af, at det er man ikke. 
+            Det er overvældende og når du søger praktikplads og de søger sådan og sådan af kompetencer, så føler du ikke at du har nogen af dem.”
+        </p>
+        <p>
+            Marie fortæller at de har fået god vejledning i processen og hvad de kan forvente af deres tid i praktik, men at det stadig er anderledes når du kommer ud.
+        </p>  
+        <p>
+            “Den første uge sov jeg jo nærmest ikke i min praktik, fordi jeg skulle op og arbejde og lave noget. 
+            De skulle jo tro jeg kunne noget. Det er den samme oplevelse jeg hører om fra mine klassekammerater.”
+        </p>
+        <p>
+            "Til gengæld har jeg også haft en praktikplads, hvor de har været gode til at gribe mig. Min chef, Christian, der tager fat i mig og siger
+            <span data-title="“Slap af Marie. Du har lavet 28 ting på 28 minutter. Tag en kop kaffe og fortsæt i morgen, ikk?&#8221;"></span>
+        </p>
+        <video class="sleddog-vid" muted autoplay loop src="assets/video/sleddogs.mp4"></video>
+    </section>
+    <section id="teori" class="flexc flex-center gap-200">
+        <h2>Teori til praksis</h2>
+        <div class="flexc gap-400">
+            <div class="flex gap-400">
+                <img src="assets/img/garmin_sos.webp" alt="person der holder en garmin i hånden" width="600">
+                <div class="flexc gap-200">
+                    <p class="sidetext">
+                        “Det er jo meget det her teori til praksis. Du sidder ikke bare og læser en bog eller er til en forelæsning
+                        og lærer noget du måske eller måske ikke skal bruge om 20 år. Her får du virkeligheds eksempler.”
+                    </p>
+                    <p class="sidetext">
+                        Marie er glad for at hun tog beslutningen om at starte på EAA, og at det ikke bare blev en nødløsning, 
+                        fordi hun ikke helt vidste hvad hun gerne ville lave. “Det var tilfældigt at jeg startede her, men det har været et godt udbytte”.
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-400">
+                <div class="flexc gap-200">
+                    <p class="sidetext">
+                        Marie søgte praktikplads efter at hun kunne få lov at bruge sit kamera og tage billeder. Derfor valgte hun content linjen på 3. semester, 
+                        og her har eleverne selv haft stor indflydelse på, hvilken retning de ville lave content i. 
+                        Om du ville tegne og lave illustrationer eller måske indspille en podcast, så kunne du få lov til det. 
+                        
+                    </p>
+                    <p class="sidetext">
+                        Det var meget frit hvilket content de kunne arbejde med, selvom der selvfølgelig var undervisning der lærte dem om bestemte ting, 
+                        så var det meget frit når de skulle lave projekt. Nu er content creation næsten det eneste Marie foretager sig. 
+                    </p>
+                    <p class="sidetext">
+                        Hendes officielle titel er SoMe Manager Praktikant, hvor hun styrer Grønlandsvogternes Facebook og Instagram side. 
+                        Hun laver indholdet dertil med videoer og billeder fra deres ture. “Ellers kan jeg bare gå ud på fortovet og tage billeder af sneen derude, 
+                        lægge det op og lave en historie dertil” siger hun med et smil.
+                    </p>
+                </div>
+                <img src="assets/img/plakat_op.webp" alt="person der opsætter plakat" width="600">
+            </div>
+            <div class="flex gap-400">
+                <img src="assets/img/hest-bil.webp" alt="Kvinde på hest ved siden af en bil" width="600">
+                <div class="flexc gap-200">
+                    <p class="sidetext">
+                        Maries erfaring er at du på skolen lærer at lave forarbejdet. Her skal du lære at analysere, teste og lave personaer, 
+                        imens på sin praktikplads er hun blevet mødt af en “vi prøver os frem og det styrer du bare” mentalitet. 
+                    </p>
+                    <p class="sidetext">
+                        Der er ikke meget metode og teori i spil på samme måde som på skolen, men det er guld værd at have den erfaring i rygsækken, 
+                        som Marie bruger når hun tager billede, eller skal beslutte sig for hvilken historie der skal lægges op frem for andre. 
+                    </p>
+                    <p class="sidetext">
+                        Det er værdifulde erfaringer at trække på, når man er kommet ud på en virkelig arbejdsplads. Grønlandsvogterne er dog en offentlig virksomhed, 
+                        så der er en lidt mere afslappet kaffe vi-tager-den-i-morgen stemning. 
+                        Kontra i det private, hvor nogle af hendes veninder pt. er i praktik fortæller at her er tid altså penge, så der er ikke meget overskud til at skulle lave for-analyser, når du har en stram tidsplan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="fremtiden" class="flexc flex-center">
+        <h2 data-title="Fremtiden"></h2>
+        <p>
+            Nu hvor jeg arbejder for forsvaret, Arktisk Kommando, som er en afdeling heroppe hvor jeg er i praktik, 
+            så har jeg fået et kæmpe stort indblik i hvordan det er at arbejde for forsvaret. 
+        </p>
+        <p>
+            Så mine tanker er begyndt at florere om ideen at jeg skal i værnepligt og have en fremtid herinde.
+            Multimediedesign-mæssigt har jeg fået et større indblik i hvordan det er at arbejde med det vi har lært i skolen - i praksis. 
+        </p>
+        <p>
+            Tilbage i efteråret vidste jeg ikke om det var nok for mig at sidde stille på et kontor hver dag.
+            Men nu hvor jeg har prøvet at arbejde med det på et rigtigt kontor i virkeligheden, så er det ikke så stillesiddende igen - i hvert fald ikke heroppe. 
+        </p>
+        <p>
+            Min plan lige nu efter jeg har fået indblik i forsvaret er at jeg vil søge ind i værnepligten og håber at kunne komme på den til sommer. 
+            Hvis ikke så hælder jeg mest til at læse videre og tage en top-op, som erhvervsakademiet også tilbyder. Så får du en professionsbachelor.
+        </p>
+        <p>
+            Ikke fordi jeg ikke føler jeg kan nok endnu, for det er jeg blevet bekræftet i min praktikplads, 
+            at selvom jeg var nervøs i starten så kan jeg godt og jeg kan mere end de forventede.
+        </p>
+        <div class="endcredits">
+            <p>Tak til Marie Sohn for billed-og videomateriale samt interview.</p>
+            <p>Vil du lære mere om dine fremtidsmuligheder? Så klik ind på vores hjemmeside på <a class="link" href="baaa.dk">baaa.dk</a></p>
+        </div>
+    </section>
+</main>
 <script src="js/pointer.js"></script>
-<script src="js/scrollindicator.js"></script>
+<script src="js/slideshow.js"></script>
 <script>
     // nedsænket video hastighed
     document.querySelector("video").playbackRate = .8;
